@@ -56,7 +56,17 @@ img {
     
 .header-container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
    }
+.nav-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+.header-link {
+    margin-right: 93px;
+}
 .page-header {
     border: 1px solid #ECECEC;
 }
@@ -215,7 +225,7 @@ padding-bottom: 106px;
  
 .team-list {
     display: flex;
-    background-color: var(--background-color);
+    background-color: #F5F4FA;
  }
 .team-list .team-item:not(:last-child) {
  margin-right: 30px;
@@ -225,6 +235,7 @@ padding-bottom: 106px;
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
+    background-color: var(--background-color);
 }
 .team-title {
     margin-bottom: 50px;
