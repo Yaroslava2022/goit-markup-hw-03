@@ -6,6 +6,8 @@
     --background-color: #FFFFFF;
     --accent-color: #2196F3;
     --logo-header-color: #000000;
+    --card-set-gap: 30px;
+    --card-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 body {
     font-family: Roboto, sans-serif;
@@ -137,6 +139,8 @@ img {
     background-color: var(--main-background-color);
 }
 .hero-title {
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
@@ -144,7 +148,7 @@ img {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--secondary-title-color);
-        
+    width: 696px;    
 }
 .hero-button {
     display: inline-block;
@@ -299,12 +303,24 @@ padding-bottom: 106px;
 /*-----------------PORTFOLIO----------------*/
 /*-----------------НАШІ ПРОЄКТИ----------------*/
 
+.project-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
-
+.nav-project-list {
+    display: flex;
+    justify-content: center;
+}
+.nav-project-list :not(:last-child) {
+    margin-right: 8px;
+}
+.nav-project-list {
+margin-bottom: 50px;
+}
 
 .nav-button {
     display: inline-block;
-    min-width: 216px;
     border-radius: 4px;
     padding: 6px 22px;
     font-family: inherit;
@@ -323,7 +339,7 @@ padding-bottom: 106px;
     color: var(--secondary-title-color);
     background-color: var(--accent-color); }
 
-    .nav-list,
+    .nav-project-list,
         .nav-button.current {
             color: var(--secondary-title-color);
     
@@ -332,7 +348,27 @@ padding-bottom: 106px;
         .nav-button.current {
             background-color: var(--accent-color);
             }
+/*----------------CARD SET----------------*/
+.card-set {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    margin-right: calc( -1 * var(--card-set-gap));
+    margin-bottom: calc( -1 * var(--card-set-gap));
 
+}
+.card-set .project-item {
+    flex-basis: calc(100% / 3 - var(--card-set-gap));
+        margin-right: var(--card-set-gap);
+        margin-bottom: var(--card-set-gap)
+}
+.card-thumb {
+padding: 20px 24px;
+}
+.project-item {
+border: 1px solid #ECECEC;
+}
 .project-title {
   margin-bottom: 4px;
   font-weight: 700;
