@@ -7,8 +7,9 @@
     --accent-color: #2196F3;
     --logo-header-color: #000000;
     --card-set-gap: 30px;
-    --card-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    --border: 1px solid #ECECEC; 
 }
+
 body {
     font-family: Roboto, sans-serif;
     color: var(--main-title-color);
@@ -53,12 +54,11 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 1200px;
-    padding: 0, 15px;
+    padding: 0 15px;
 }
     
 .header-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
    }
 .nav-header {
@@ -70,7 +70,7 @@ img {
     margin-right: 93px;
 }
 .page-header {
-    border: 1px solid #ECECEC;
+    border-bottom: var(--border);
 }
 .logo {
     font-family: 'Raleway';
@@ -86,6 +86,7 @@ img {
     display: flex;
     align-items: center;
     gap: 50px;
+    margin-left: auto;
 }
 
  
@@ -154,6 +155,7 @@ img {
     display: inline-block;
     min-width: 216px;
     border-radius: 6px;
+    border: none;
     padding: 10px 32px;
     font-family: inherit;
         font-weight: 700;
@@ -171,6 +173,10 @@ img {
 }
 /*-----------------Переваги----------------*/
 
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 .advantages-section {
 padding-top: 94px;
 padding-bottom: 94px;
@@ -200,7 +206,7 @@ padding-bottom: 94px;
 }
 /*-----------------Наша діяльність----------------*/
 .activity-section {
-padding-bottom: 106px;
+padding-bottom: 94px;
 
 }
 .activity-list {
@@ -222,10 +228,7 @@ padding-bottom: 106px;
 
 .team-section {
     background-color: #F5F4FA;
-    padding-top: 94px;
-    padding-bottom: 94px;
-   
-}
+   }
  
 .team-list {
     display: flex;
@@ -283,7 +286,9 @@ padding-bottom: 106px;
            
             color: var(--secondary-title-color);
 }
-
+.footer-item:not(:last-child) {
+    margin-bottom: 9px; 
+}
 
 .footer-mail, .footer-tel {
     font-style: normal;
@@ -303,10 +308,6 @@ padding-bottom: 106px;
 /*-----------------PORTFOLIO----------------*/
 /*-----------------НАШІ ПРОЄКТИ----------------*/
 
-.project-section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
 
 .nav-project-list {
     display: flex;
@@ -365,10 +366,12 @@ margin-bottom: 50px;
 }
 .card-thumb {
 padding: 20px 24px;
+border-right: var(--border);
+border-bottom: var(--border);
+border-left: var(--border);
 }
-.project-item {
-border: 1px solid #ECECEC;
-}
+
+
 .project-title {
   margin-bottom: 4px;
   font-weight: 700;
